@@ -12,4 +12,9 @@ router.post("/adddetails",async(req,res)=>{
     )
 })
 
+router.get("/viewall",async(req,res)=>{
+    let data=await resumeModel.find()
+    res.json(data)
+})
+
 module.exports=router
